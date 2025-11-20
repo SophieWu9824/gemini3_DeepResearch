@@ -1,0 +1,5 @@
+{
+  "name": "DeepRes - AI Research Companion",
+  "description": "A minimalist, split-pane deep research application that generates live markdown reports using Google Search grounding.",
+  "requestFramePermissions": []
+}

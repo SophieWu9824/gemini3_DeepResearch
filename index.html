@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepRes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#09090b', // zinc-950
+              surface: '#18181b',    // zinc-900
+              border: '#27272a',     // zinc-800
+              primary: '#fafafa',    // zinc-50
+              secondary: '#a1a1aa',  // zinc-400
+              accent: '#3b82f6',     // blue-500
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46;
+      }
+      body {
+        background-color: #09090b;
+        color: #fafafa;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      /* Markdown Styles */
+      .markdown-body h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.5em; margin-top: 1em; letter-spacing: -0.025em; }
+      .markdown-body h2 { font-size: 1.5em; font-weight: 600; margin-bottom: 0.5em; margin-top: 1em; letter-spacing: -0.025em; color: #e4e4e7; }
+      .markdown-body h3 { font-size: 1.25em; font-weight: 600; margin-bottom: 0.5em; margin-top: 1em; color: #d4d4d8; }
+      .markdown-body p { margin-bottom: 1em; line-height: 1.7; color: #d4d4d8; }
+      .markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; color: #d4d4d8; }
+      .markdown-body ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 1em; color: #d4d4d8; }
+      .markdown-body li { margin-bottom: 0.25em; }
+      .markdown-body code { background-color: #27272a; padding: 0.2em 0.4em; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
+      .markdown-body pre { background-color: #18181b; padding: 1em; border-radius: 8px; overflow-x: auto; border: 1px solid #27272a; margin-bottom: 1em; }
+      .markdown-body blockquote { border-left: 4px solid #3f3f46; padding-left: 1em; color: #a1a1aa; margin-left: 0; margin-bottom: 1em; font-style: italic; }
+      .markdown-body a { color: #60a5fa; text-decoration: none; }
+      .markdown-body a:hover { text-decoration: underline; }
+      .markdown-body table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+      .markdown-body th, .markdown-body td { border: 1px solid #3f3f46; padding: 0.5em; text-align: left; }
+      .markdown-body th { background-color: #18181b; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
